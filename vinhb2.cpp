@@ -3,7 +3,7 @@ using namespace std;
 int main(){
     set<char> tmp;
     set<char> U={'a','b','c','d','e','f','g','h'};
-    cout<<U.size();
+    // cout<<U.size();
     set<char> A={'a','b','f','h','k'};
     set<char> B={'b','g','h'};
     cout<<"A: ";
