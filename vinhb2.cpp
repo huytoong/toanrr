@@ -24,6 +24,7 @@ int main(){
     for(auto x: A){
       if(B.count(x)>0) tmp.insert(x);
     }
+    for(auto x: tmp) cout<<x<<" ";
     for(auto x: U){
       if(tmp.count(x)>0) cout<<1;
       else cout<<0;
@@ -35,6 +36,7 @@ int main(){
     for(auto x: B){
       if(A.count(x)>0) tmp.insert(x);
     }
+    for(auto x: tmp) cout<<x<<" ";
     for(auto x: U){
       if(tmp.count(x)>0) cout<<1;
       else cout<<0;
