@@ -11,7 +11,7 @@ int main(){
     int step,MSG;
     // set value seq,ack
     A.seq=1000;     B.seq=1000;  //demo
-    A.ack=0;        B.ack=1000;
+    A.ack=0;        B.ack=1000; // author trantung
     cout<<"STEP: ";
     cin>>step;
     cout<<"MGS: ";
@@ -40,11 +40,11 @@ int main(){
           to->previous=0;
           acceptMSG=1;
         }
-        cout<<"step "<<i<<": SEQ_"<<from->name<<": "<<from->seq<<"   ACK_"+from->name<<": "<<from->ack;
-        if(PhatHien_wrongMsg==1) cout<<"PHAT HIEN GUI SAI"<<endl;
-        else cout<<endl;
-        if(acceptMSG==0) cout<<" KO ACC"<<endl;
-        else cout<<endl;
+        cout<<"step "<<i<<": SEQ_"<<from->name<<": "<<from->seq<<"   ACK_"+from->name<<": "<<from->ack<<endl;
+        // if(PhatHien_wrongMsg==1) cout<<"PHAT HIEN GUI SAI"<<endl;
+        // else cout<<endl;
+        // if(acceptMSG==0) cout<<" KO ACC"<<endl;
+        // else cout<<endl;
         if (from->seq != to->ack) acceptMSG=0;
         else acceptMSG=1;
         if (acceptMSG==0 && from->previous == 0)
