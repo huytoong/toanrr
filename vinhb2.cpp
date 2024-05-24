@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 class host{
-    public: int seq, ack;
+    public: int seq, ack,win;
     public: int buff,previous;
     public: string name;
 };
@@ -10,8 +10,9 @@ int main(){
     A.name="A";     B.name="B";
     int step,MSG;
     // set value seq,ack
-    A.seq=1000;     B.seq=1000;  //demo
-    A.ack=0;        B.ack=1000; // author trantung
+    A.seq=100;     B.seq=1000;  //demo
+    A.ack=0;        B.ack=100; // author trantung
+    A.win=800000;     B.win=800000;
     cout<<"STEP: ";
     cin>>step;
     cout<<"MGS: ";
@@ -40,7 +41,7 @@ int main(){
           to->previous=0;
           acceptMSG=1;
         }
-        cout<<"step "<<i<<": SEQ_"<<from->name<<": "<<from->seq<<"   ACK_"+from->name<<": "<<from->ack<<endl;
+        cout<<"step "<<i<<": SEQ_"<<from->name<<": "<<from->seq<<"   ACK_"+from->name<<": "<<from->ack<<"  win_"<<from->name<<": "<<from->win<<endl;
         // if(PhatHien_wrongMsg==1) cout<<"PHAT HIEN GUI SAI"<<endl;
         // else cout<<endl;
         // if(acceptMSG==0) cout<<" KO ACC"<<endl;
@@ -55,6 +56,7 @@ int main(){
             if(acceptMSG==1){
               from->seq+=MSG;
               to->ack+=MSG;
+              to->win-=MSG;
             }
             else{
               if(PhatHien_wrongMsg==0){
