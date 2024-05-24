@@ -9,7 +9,7 @@ int main(){
     host A,B;
     A.name="A";     B.name="B";
     int step,MSG;
-    // set value seq,ack
+    // set value seq,ack,win
     A.seq=100;     B.seq=1000;  //demo
     A.ack=0;        B.ack=100; // author trantung
     A.win=800000;     B.win=800000;
